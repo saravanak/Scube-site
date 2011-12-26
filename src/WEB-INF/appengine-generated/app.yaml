@@ -1,0 +1,43 @@
+application: 'scubedemo'
+runtime: java
+version: '1'
+inbound_services:
+- warmup
+derived_file_type:
+- java_precompiled
+api_version: '1.0'
+handlers:
+- url: (/)
+  static_files: __static__\1index.html
+  upload: __static__/index.html
+  require_matching_file: True
+  login: optional
+  secure: optional
+- url: (/.*/)
+  static_files: __static__\1index.html
+  upload: __static__/.*/index.html
+  require_matching_file: True
+  login: optional
+  secure: optional
+- url: (/.*)
+  static_files: __static__\1
+  upload: __static__/.*
+  require_matching_file: True
+  login: optional
+  secure: optional
+- url: /scubeproductions
+  script: unused
+  login: optional
+  secure: optional
+- url: /
+  script: unused
+  login: optional
+  secure: optional
+- url: /.*/
+  script: unused
+  login: optional
+  secure: optional
+- url: /_ah/.*
+  script: unused
+  login: optional
+  secure: optional

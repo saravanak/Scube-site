@@ -1,0 +1,73 @@
+
+/* slideViewer 1.0 default styles */
+.svw {width: 50px; height: 20px; background: #fff;}
+.svw ul{position: relative; left: -999em;}
+
+.stripViewer { /* this is the DIV container for your UL of images */
+position: relative;
+overflow: hidden; 
+margin: 0 0 1px 0;
+}
+.stripViewer ul { /* this is your UL of images */
+position: relative;
+left: 0;
+top: 0;
+width: 1%;
+list-style-type: none;
+
+}
+.stripViewer ul li { /* each image is arranged horizontally */
+float:left;
+}
+.stripTransmitter { /* this is the DIV for your transmitter (the UL generated at run time that commands the list)*/
+overflow: auto;
+width:714px;
+background-color:#0f0f0f;
+height:27px;
+}
+.stripTransmitter ul { /* the auto-generated set of links */
+position: relative;
+list-style-type: none;
+float: right;
+}
+.stripTransmitter ul li{ /* in this list too, each LI is arranged horizontally */
+float:left;
+margin: 6px 5px 0px 0px;
+background:#f6f6f5;
+}
+.stripTransmitter a{ /* the links. */
+font: bold 10px Verdana, Arial;
+text-align: center;
+line-height: 14px;
+background: #f6f6f5;
+color: #666666;
+text-decoration: none;
+display: block;
+border:1px solid #FFF;
+width: 14px;
+outline:none;
+height:14px;
+}
+.stripTransmitter a:hover { /* hover */
+background: #666666;
+color: #fff;
+height:14px;
+width:14px;
+border:1px solid #FFF;
+}
+.stripTransmitter a.current, .stripTransmitter a.current:hover { /* current */
+background: #e24c02;
+border:1px solid #FFF;
+color: #ffffff;
+height:14px;
+width:14px;
+}
+/* end slideViewer default styles */
+
+.tooltip
+{
+padding: 0.5em;
+background: #fff;
+color: #000;
+border: 5px solid #dedede;
+}
